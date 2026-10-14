@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GMR Agro Care in Konanatambagi provides seeds, fertilizers and pesticides for farmers.">
+  <title>GMR'S Agro Care | Konanatambagi</title>
+  <style>
+    :root {
+      --green: #1f6b3b;
+      --dark: #123b25;
+      --lime: #c9e86b;
+      --cream: #f7f8ef;
+      --text: #243229;
+      --muted: #627066;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
+    a { color: inherit; }
+    .topbar { background: var(--dark); color: white; padding: 9px 5%; font-size: .92rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    header { background: white; position: sticky; top: 0; z-index: 10; box-shadow: 0 3px 16px #102d1912; }
+    .nav { max-width: 1150px; margin: auto; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo { width: 62px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--green); color: white; font-weight: 900; letter-spacing: -1px; }
+    .brand strong { display: block; font-size: 1.15rem; color: var(--dark); line-height: 1.2; }
+    .brand small { color: var(--muted); }
+    nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-weight: 700; font-size: .95rem; }
+    nav a:hover { color: var(--green); }
+    .button { display: inline-block; border: 0; border-radius: 999px; padding: 13px 21px; text-decoration: none; font-weight: 800; background: var(--lime); color: var(--dark); cursor: pointer; }
+    .button.green { background: var(--green); color: white; }
+    .hero { background: linear-gradient(100deg, #103d25f2, #1d613bd9), url('shop-photo-1.jpg') center/cover; color: white; }
+    .hero-inner { max-width: 1150px; margin: auto; padding: 78px 22px 86px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 44px; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 2px; color: var(--lime); font-size: .82rem; font-weight: 800; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.6rem); line-height: 1.04; margin: 12px 0 20px; letter-spacing: -1.5px; }
+    .hero p { color: #edf6ee; font-size: 1.12rem; max-width: 600px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button.outline { border: 1px solid #ffffff8c; color: white; background: transparent; }
+    .photo-frame { min-height: 330px; border: 7px solid #ffffff35; border-radius: 28px; overflow: hidden; background: #ffffff15; box-shadow: 0 18px 45px #001b0e44; }
+    .photo-frame img { display: block; width: 100%; height: 330px; object-fit: cover; }
+    .photo-placeholder { height: 330px; display: grid; place-items: center; padding: 25px; text-align: center; color: #f2ffe7; }
+    .photo-placeholder span { font-size: 3rem; display: block; }
+    section { padding: 70px 22px; }
+    .container { max-width: 1100px; margin: auto; }
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+    .section-head .eyebrow { color: var(--green); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; color: var(--dark); margin: 10px 0 14px; letter-spacing: -.7px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: white; padding: 28px; border-radius: 20px; box-shadow: 0 8px 30px #173b1d0c; border: 1px solid #e8eee2; }
+    .icon { width: 56px; height: 56px; border-radius: 16px; background: #edf6d9; display: grid; place-items: center; font-size: 1.8rem; }
+    .card h3 { color: var(--dark); margin: 18px 0 8px; font-size: 1.25rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .about { background: white; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: center; }
+    .about-image { min-height: 350px; border-radius: 24px; overflow: hidden; background: #e6efdd; }
+    .about-image img { width: 100%; height: 350px; object-fit: cover; display: block; }
+    .image-note { padding: 28px; color: var(--green); font-weight: 700; text-align: center; }
+    .ticks { list-style: none; padding: 0; margin: 22px 0; }
+    .ticks li { margin: 11px 0; }
+    .ticks li::before { content: "✓"; display: inline-grid; place-items: center; width: 25px; height: 25px; margin-right: 10px; background: #e5f2cf; color: var(--green); border-radius: 50%; font-weight: 900; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .gallery figure { margin: 0; border-radius: 18px; overflow: hidden; background: white; border: 1px solid #e6ecdf; }
+    .gallery img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .gallery figcaption { padding: 12px 15px; font-weight: 700; }
+    .gallery-placeholder { height: 220px; display: grid; place-items: center; text-align: center; padding: 20px; color: var(--green); background: #eaf2df; }
+    .contact { background: var(--dark); color: white; }
+    .contact h2 { color: white; }
+    .contact .section-head p { color: #d5e5d8; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .contact-box { border: 1px solid #ffffff30; background: #ffffff0b; border-radius: 20px; padding: 25px; }
+    .contact-box h3 { margin-top: 0; color: var(--lime); }
+    .contact-box p { color: #e2eee5; }
+    .contact-box a { color: white; }
+    footer { padding: 22px; text-align: center; background: #0b2b19; color: #d5e5d8; font-size: .9rem; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      nav { gap: 13px; }
+      .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-inner { padding-top: 55px; }
+      .photo-frame { min-height: 260px; }
+      .photo-frame img, .photo-placeholder { height: 260px; }
+      .cards, .gallery { grid-template-columns: 1fr; }
+      .gallery img, .gallery-placeholder { height: 240px; }
+      section { padding: 55px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>🌱 Helping farmers grow with confidence</span>
+    <span>📍 Konanatambagi</span>
+  </div>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home" aria-label="GMR'S Agro Care home">
+        <div class="logo">GMR'S</div>
+        <div><strong>GMR'S Agro Care</strong><small>Seeds • Fertilizers • Pesticides</small></div>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Shop Photos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Your local agriculture shop</div>
+          <h1>Grow better.<br>Harvest more.</h1>
+          <p>Welcome to <strong>GMR'S Agro Care</strong> in Konanatambagi — your local shop for agricultural seeds, fertilizers and crop-protection products.</p>
+          <div class="hero-actions">
+            <a class="button" href="#products">Explore Products</a>
+            <a class="button outline" href="#contact">Visit Our Shop</a>
+          </div>
+        </div>
+        <div class="photo-frame" aria-label="Shop photo">
+          <!-- Replace shop-photo-1.jpg with your own shop photo file name -->
+          <img src="11.jpg" alt="Front view of GMR Agro Care shop" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="photo-placeholder" style="display:none"><div><span>🏪</span><strong>Add your shop photo here</strong><br>Save your image as <b>shop-photo-1.jpg</b> beside this HTML file.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What we offer</div>
+          <h2>Support for every growing season</h2>
+          <p>Explore our main product categories. Contact the shop to check availability and get product information suited to your crop.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🌾</div>
+            <h3>Seeds</h3>
+            <p>Seeds for your farming needs, with options depending on crop, season and availability.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🌿</div>
+            <h3>Fertilizers</h3>
+            <p>Fertilizer products to support crop nutrition and healthy plant growth.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🛡️</div>
+            <h3>Pesticides</h3>
+            <p>Crop-protection products. Always follow the product label and local agricultural guidance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <!-- Optional second photo: save your image as shop-photo-2.jpg -->
+          <img src="22.jpg" alt="Inside view of GMR Agro Care shop" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="image-note" style="display:none">📷 Add another shop photo<br><small>Save it as shop-photo-2.jpg beside index.html.</small></div>
+        </div>
+        <div>
+          <div class="eyebrow">About our shop</div>
+          <h2>Here for the farming community</h2>
+          <p><strong>GMR'S Agro Care</strong> serves farmers in and around Konanatambagi with agricultural supplies including seeds, fertilizers and pesticides.</p>
+          <ul class="ticks">
+            <li>Seeds and crop-growing essentials</li>
+            <li>Fertilizer products for crop nutrition</li>
+            <li>Crop-protection product options</li>
+            <li>Local service for the farming community</li>
+          </ul>
+          <a class="button green" href="#contact">Find Our Shop</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">A look at our shop</div>
+          <h2>Shop Photo Gallery</h2>
+          <p>Add your real shop photos by using the filenames shown below. You can use just one photo or add more.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <img src="1.jpg" alt="GMR Agro Care shop front" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="gallery-placeholder" style="display:none">📷<br>Save the first photo as<br><b>shop-photo-1.jpg</b></div>
+            <figcaption>Our Shop</figcaption>
+          </figure>
+          <figure>
+            <img src="22.jpg" alt="GMR Agro Care shop interior" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="gallery-placeholder" style="display:none">📷<br>Save the second photo as<br><b>shop-photo-2.jpg</b></div>
+            <figcaption>Inside the Shop</figcaption>
+          </figure>
+          <figure>
+            <img src="11.jpg" alt="Agricultural products at GMR Agro Care" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="gallery-placeholder" style="display:none">📷<br>Optional third photo:<br><b>shop-photo-3.jpg</b></div>
+            <figcaption>Our Products</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Get in touch</div>
+          <h2>Visit GMR'S Agro Care</h2>
+          <p>We look forward to serving farmers in Konanatambagi and nearby areas.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>📍 Shop Location</h3>
+            <p><strong>GMR'S Agro Care</strong><br>Konanatambagi, Karnataka, India</p>
+            <p><small>Located behind the Primary School, Konanatambagi.</small></p>
+          </div>
+          <div class="contact-box">
+            <h3>📞 Contact Details</h3>
+            <p>Phone / WhatsApp: <strong>9611650989, 9945449354</strong></p>
+            <p>Business hours: <strong>7:00 AM To 6:00 PM</strong></p>
+            <!--<p><small>Replace these details with your actual shop contact information before publishing.</small></p>-->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> GMR'S Agro Care, Konanatambagi. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
