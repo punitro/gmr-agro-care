@@ -38,8 +38,8 @@
     .hero p { color: #edf6ee; font-size: 1.12rem; max-width: 600px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .button.outline { border: 1px solid #ffffff8c; color: white; background: transparent; }
-    .photo-frame { min-height: 330px; border: 7px solid #ffffff35; border-radius: 28px; overflow: hidden; background: #ffffff15; box-shadow: 0 18px 45px #001b0e44; }
-    .photo-frame img { display: block; width: 100%; height: 330px; object-fit: cover; }
+    .photo-frame { min-height: auto; border: 7px solid #ffffff35; border-radius: 28px; overflow: hidden; background: #ffffff15; box-shadow: 0 18px 45px #001b0e44; }
+    .photo-frame img { display: block; width: 100%; height: auto; object-fit: cover; }
     .photo-placeholder { height: 330px; display: grid; place-items: center; padding: 25px; text-align: center; color: #f2ffe7; }
     .photo-placeholder span { font-size: 3rem; display: block; }
     section { padding: 70px 22px; }
@@ -55,17 +55,17 @@
     .card p { margin: 0; color: var(--muted); }
     .about { background: white; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: center; }
-    .about-image { min-height: 350px; border-radius: 24px; overflow: hidden; background: #e6efdd; }
-    .about-image img { width: 100%; height: 350px; object-fit: cover; display: block; }
+    .about-image { min-height: auto; border-radius: 24px; overflow: hidden; background: #e6efdd; }
+    .about-image img { width: 100%; height: auto; object-fit: cover; display: block; }
     .image-note { padding: 28px; color: var(--green); font-weight: 700; text-align: center; }
     .ticks { list-style: none; padding: 0; margin: 22px 0; }
     .ticks li { margin: 11px 0; }
     .ticks li::before { content: "✓"; display: inline-grid; place-items: center; width: 25px; height: 25px; margin-right: 10px; background: #e5f2cf; color: var(--green); border-radius: 50%; font-weight: 900; }
     .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .gallery figure { margin: 0; border-radius: 18px; overflow: hidden; background: white; border: 1px solid #e6ecdf; }
-    .gallery img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .gallery img { width: 100%; height: auto; object-fit: cover; display: block; }
     .gallery figcaption { padding: 12px 15px; font-weight: 700; }
-    .gallery-placeholder { height: 220px; display: grid; place-items: center; text-align: center; padding: 20px; color: var(--green); background: #eaf2df; }
+    .gallery-placeholder { height: auto; display: grid; place-items: center; text-align: center; padding: 20px; color: var(--green); background: #eaf2df; }
     .contact { background: var(--dark); color: white; }
     .contact h2 { color: white; }
     .contact .section-head p { color: #d5e5d8; }
